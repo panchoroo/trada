@@ -1,0 +1,87 @@
+/* theProcess styles */
+
+.theProcess {
+    padding-bottom: 125px;
+}
+
+.theProcess .wrapper {
+    align-items: center;
+    justify-content: flex-start;
+    &.flexRow {
+        position: relative;
+        &::before,
+        &::after {
+            @include slideshowButtons(3px, 50px, rgb(205, 205, 205), none, calc(25% + 40px), 31px);
+        }
+        &::before {
+            left: calc(25% - 100px);
+        }
+    }
+    
+    img {
+        width: 50%;
+        height: 670px;
+        position: relative;
+    }
+    >div{
+        position: absolute;
+        width: 500px;
+        right: 0;
+        z-index: 10;
+        background: $secondary;
+    }
+    .btn {
+        margin: 0 auto;
+    }
+    nav {
+        justify-content: center;
+    }   
+    h6 {
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color:  rgba(0,0,0,.3);
+            width: 30px;
+            height: 2px;
+            top: 30px;
+            left: calc(50% - 15px);
+        }  
+    }
+}
+
+.theProcess .faNotBtn {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    margin-top: 86px;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    i {
+        margin: 0 auto;
+        font-family: "FontAwesome";
+        font-size: 2rem;
+        color: $secondary;
+    }
+}
+
+.theProcess a:not(.btn){ 
+    color: #e5e5e5;
+    font-size: 2rem;
+    font-family: $font2;
+    padding-right: 24px;
+    margin-bottom: 80px;
+    &:hover {
+        color: $accent;
+        text-decoration: underline;
+    }
+}
+
+// ~~~~~~~ middle slideshow button   ~~~~~~~
+.theProcess .relative.slideshow::after {
+    @include slideshowButtons(3px, 50px, $secondary, 301px, -50%, none);
+}

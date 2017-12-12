@@ -1,0 +1,32 @@
+/* funFacts styles */ 
+
+.funFacts {
+    background-image: url(../images/facts.jpg);
+    padding-bottom: 100px;
+}
+
+.facts {
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0);
+    justify-content: space-between;
+}
+.fact {
+    border: 4px solid $secondary; 
+    text-align: center;
+    width: calc(25% - 50px);
+    padding: 46px;
+    i {
+        color: $accent;
+        background: $secondary;
+        padding: 10px;
+    }
+        .fa {
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $accent;
+        }
+        .fa.custom-fa{
+            font-size:14rem;
+            color:transparent;
+        }
+    }

@@ -1,0 +1,98 @@
+/* header styles */ 
+
+header.darkBackground {
+    height: 100vh;
+    background-image: url(../images/hero.jpg); 
+    background-size: cover;
+    background-position: center;   
+}
+
+div.headerTop {
+    justify-content: space-around;
+    text-align: left;
+    h4 {
+        font-size: 24px;
+        margin-top: 40px;
+        padding: 10px;
+        border: 2px solid $accent;
+    }
+    nav {
+        padding: 10px;
+        max-width: 960px;
+        justify-content: space-between;
+        align-items: baseline;
+
+        a {
+            padding: 5px 20px;
+            border: 1px solid rgba(255, 255, 255, 0);
+        }
+        a:focus, 
+        a:hover {
+            border-color: $accent;
+            color: $accent;
+        }
+
+        &.social {
+            a {
+                padding: 5px;
+                margin-right: 10px;
+                display: inline-block;
+                i {
+                    min-width: 18px;
+                    text-align: center;
+                }
+            }
+            a:hover, 
+            a:focus {
+                border: 1px solid $accent;
+                color: $accent;
+                border-radius: 50%;
+            }
+            
+        }
+
+    }
+    .flexRow nav.flexRow{
+        flex-grow: 3;
+        padding: 0px;
+    }
+}
+        
+h1{
+//   font-size: 80px;
+    font-size: 8vw;
+    margin-top: 0;
+    letter-spacing: 15px;
+  span {
+    color: $accent;
+  }
+}
+
+header h3{
+    font-family: $font2;
+    font-size: 2vw;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+header div.flexColumn {
+    height: calc(100vh - 50px);
+}
+
+.heroTitle {
+    margin: auto;
+}
+
+header::before,
+header::after,
+.whoWeAre::before {
+    @include slideshowButtons(3px, 50px, rgb(205, 205, 205), calc(100vh - 50px), calc(50% - 100px), none);
+}
+header::after {
+    left: calc(50% + 50px);
+}
+
+.whoWeAre::before {
+    background: $accent;
+    left: calc(50% - 25px);
+}

@@ -1,0 +1,62 @@
+/* btn styles */ 
+
+.btn {
+  z-index: 20;
+  text-align: center;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.btn + .darkBackground {
+    background: rgba(255, 255, 255, 0);
+    color: $secondary;
+}
+.btn--rect {
+    padding: 14px 23px;
+    border: 2px solid $primary;
+    background: rgba(255, 255, 255, 0);
+    min-width: 140px;
+}
+.btn--square {
+padding: 17px 17px;
+}
+
+.relative{
+    position: relative;
+
+    .btn--fa {
+        @include circleFa (70px, $accent, calc(100% - 35px), calc(50% - 45px), 1.5rem, $secondary);
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        -moz-background-clip: content;     /* Firefox 3.6 */
+        -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+        background-clip: content-box; 
+    }
+    .btn--fa.btn--large {
+        @include circleFa (88px, $secondary, calc(100% - 40px), calc(100% + 25px), 2rem, $accent);
+    }
+    .btn--fa.btn--small {
+        @include circleFa (50px, $secondary, 0, 0, 1rem, $primary);
+        position: relative;
+    }
+}
+
+.flexRow.relative {
+    justify-content: center;
+    align-items: center;
+}
+
+.ourWorks .btn--square {
+    text-decoration: none;
+    padding: 7px 14px;
+    background: $secondary;
+    border: 1px solid $primary;
+}
+
+.btn.btn--rect:hover,
+.btn.btn--rect:focus,
+.btn.btn--square:hover, 
+.btn.btn--square:focus {
+    background: $accent;
+    border-color: $accent;
+    color: $secondary;
+}

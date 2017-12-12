@@ -1,0 +1,42 @@
+/* whatClientsSay styles */ 
+
+.whatClientsSay {
+    background: rgb(55, 55, 55);
+    text-align: center;
+    .wrapper>img {
+        margin: 60px 0px;
+        max-width: 30px;
+    }
+    .flexRow {
+        max-width: 1000px;
+        margin: 0 auto;
+        justify-content: space-between;
+        position: relative;
+        a{
+            position: absolute;
+            top: -110px;
+            padding: 5px;
+            left: 0px;
+            background-color: white;
+            color: #202020;
+            width: 30px;
+        }
+    }
+    .flexRow a:last-child{
+        left: calc(100% - 50px);
+    }
+}
+
+.whatClientsSay ul{
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.1);
+    li {
+        padding: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

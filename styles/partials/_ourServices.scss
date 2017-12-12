@@ -1,0 +1,77 @@
+/* ourServices styles */ 
+
+.ourServices .sectionTitleLeft{
+    margin-top: 120px;
+}
+
+.leftHalf {
+    padding-right: 80px;
+    width: 50%;
+    .flexColumn {
+        left: 0;
+        justify-content: center;
+        .relative::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 50px;
+            width: 3px;
+            
+            background: $accent;
+            z-index: 30;
+            left: 40px;
+        }
+        div:nth-child(2) ::before{ 
+            background: rgb(190, 190, 190);
+            bottom: -180px;
+        }
+        div:nth-child(4) ::before {
+            background: rgb(190, 190, 190);
+            bottom: +80px;
+        }
+    }
+}
+
+section.ourServices {
+    align-items: center;
+    text-align: right;
+    position: relative;
+    .cowSkull {
+        width: 50%;
+        background-image: url(../images/cowskull.jpg);
+        object-fit: cover;
+        min-height: 789px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        
+    }
+
+    h6 {
+        margin-top: 0;
+        margin-bottom: 28px;
+        text-align: right;
+        color: $accent;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 77px;
+        text-align: right;
+        font-weight: 400;
+        line-height: 1.5;
+        padding-left: 50px;
+    }
+    
+    i {
+        position: relative;
+        left: 100%;
+        height: 0px;
+        padding: 0;
+        margin: 0;
+        @include circleFa(88px, $secondary, -35px, calc(-100% - 44px), 1.5rem, $accent);
+    }
+
+}
+ 

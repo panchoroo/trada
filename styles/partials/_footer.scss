@@ -1,0 +1,107 @@
+/* footer styles */ 
+
+footer {
+    position: relative;
+    text-align: center;
+    padding-bottom: 180px;
+    .flexRow {
+    justify-content: space-between;
+    }
+
+    .sectionTitle {
+        padding: 11px;
+        border: 2px solid $accent;
+        max-width: 100px;
+        margin-bottom: 50px;
+    }
+
+    .leftMidRight:nth-child(1) h6,
+    .leftMidRight:nth-child(1) p {
+        text-align: left;
+    }
+
+    .leftMidRight div:nth-child(3) h6,
+    .leftMidRight div:nth-child(3) p {
+        text-align: right;
+    }
+    #centeredh {
+        text-align: center;
+        margin-left: calc(50% - 55px);
+        margin-top: 110px;
+    } 
+    #centeredp {
+        text-align: center;
+    }
+
+    .wrapper a {
+        border: 1px solid rgba(255, 255, 255, 0);
+        margin: 0 10px;
+        padding: 5px;
+        display: inline-block;
+        i {
+            min-width: 18px;
+            text-align: center;
+        }
+        &:focus,
+        &:hover {
+            border: 1px solid $accent;
+            color: $accent;
+            border-radius: 50%;
+        }
+    }
+    .btn.btn--square:hover, 
+    .btn.btn--square:focus {
+        background: rgba(5, 4, 4, 0);
+        h6 {
+            background: $accent;
+        }
+        i {
+            color: $accent;
+        }
+    }
+}
+
+.footerBottom {
+    background: black;
+    justify-content: center;
+    &.flexRow {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        padding: 15px;
+        justify-content: center;
+    
+    }
+    span {
+            color:  #606060;
+        }
+    
+    p{
+        align-self: flex-start;
+    }
+    
+}
+
+.footerLogo {
+    padding: 0 20px;
+}
+
+footer>.relative>a {
+        position: fixed;
+        color:  $accent;
+        padding: 0px 17px;
+        right: 0;
+        bottom: 30px;
+        
+        h6{
+            margin:0;
+            max-width: 50px;
+            border: 1px solid $accent;
+            letter-spacing: 0.4rem;
+            padding: 7px 10px 7px 13px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+    }
+
+
